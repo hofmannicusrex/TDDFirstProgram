@@ -24,12 +24,14 @@ the output means
 """
 
 import unittest
-from main import camper_age_input
+from camper_age_input_hofmann import camper_age_input_hofmann
 
 
 class FunctionTestCase(unittest.TestCase):
     def test_something(self):
-        self.assertEqual(False, True)
+        age_in_years = 30
+        result = camper_age_input_hofmann.convert_to_months(age_in_years)
+        self.assertEqual(result, 30)  # Good age range (in years?): 3-72
 
 
 if __name__ == '__main__':
